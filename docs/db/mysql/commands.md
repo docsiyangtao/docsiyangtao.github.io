@@ -1,3 +1,5 @@
+# MySQL常用命令
+
 ## DDL
 
 ### 数据库
@@ -39,7 +41,7 @@ create table 表名(
 	字段名 数据类型 完整性约束条件 [character set 字符集名称] [collate 比较规则],
 	字段名 数据类型 完整性约束条件,
 	字段名 数据类型 完整性约束条件
-)engine=存储引擎 default charset=编码方式;
+)engine=存储引擎 auto_incrment=1 default charset=编码方式;
 
 -- 查看数据表
 show create table 表名;
@@ -129,14 +131,26 @@ drop view if exists 视图名称 [, 视图名称2, ...];
 
 
 
+## 变量
+
+```mysql
+-- 查看所有全局变量
+show global variables [like '%xxxx%'];
+
+-- 查看所有会话变量
+show session variables [like '%xxxx%'];
+show variables [like '%xxxx%'];
+```
+
+
+
 ## DML
 
 ```mysql
 -- 添加数据
-insert into 表名 values(值1, 值2, ......);
-insert into 表名(字段1,字段2,...)values(值1,值2,...);
 insert into 表名 set 字段名1=值1[,字段名2=值2,...];
-insert into 表名[(字段名1,字段名2,...)]values(值1,值2,...),(值1,值2,...)...;
+insert into 表名[(字段名1,字段名2,...)]values(值1,值2,...)[,(值1,值2,...)...];
+insert into 表名(字段1,字段2,...)select...
 
 -- 更新数据
 update 表名 set 字段名1=值1[,字段名2=值2,...] [where 条件表达式];
@@ -144,6 +158,11 @@ update 表名 set 字段名1=值1[,字段名2=值2,...] [where 条件表达式];
 -- 删除数据
 delete from 表名 [where 条件表达式];
 truncate [table] 表名;
+
+-- 替换或更新数据
+replace into 表名 set 字段名1=值1[,字段名2=值2,...];
+replace into 表名[(字段名1,字段名2,...)]values(值1,值2,...)[,(值1,值2,...)...];
+replace into 表名(字段1,字段2,...)select...
 ```
 
 
