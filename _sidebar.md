@@ -5,7 +5,9 @@
 - 后端
   - Java
     - JavaSE
-      - [日期时间](./docs/bg/java/javase/datetime)
+      - [比较器](./docs/bg/java/javase/comparator)
+      - [金钱的计算](./docs/bg/java/javase/bigdecimal)
+      - [Java8日期时间](./docs/bg/java/javase/datetime)
       - [枚举类](./docs/bg/java/javase/enum)
       - [接口](./docs/bg/java/javase/interface)
       - [函数式接口](./docs/bg/java/javase/functional-interface)
@@ -18,8 +20,9 @@
       - [反射](./docs/bg/java/javase/reflection)
     - 工具类
       - [FastJson常用API](./docs/bg/java/utils/fastjson)
+      - [EasyExcel简单使用](./docs/bg/java/utils/easyExcel)
     - Spring
-      - [BeanFactory入门](./docs/bg/spring/bean-factory)
+      - [ApplicationContext初认识](./docs/bg/spring/applicationContext)
       - [容器实现](./docs/bg/spring/container-implement)
     - SpringBoot
       - [入门](./docs/bg/spring-boot/start)
@@ -41,6 +44,7 @@
 - 数据库
   - MySQL
     - [MySQL常用命令](./docs/db/mysql/commands)
+    - [存储过程](./docs/db/mysql/stored-procedure)
     - [MySQL8新特性](./docs/db/mysql/mysql-8-features)
     - [MySQL函数篇](./docs/db/mysql/functions)
     - [MySQL常见参数](./docs/db/mysql/parameters)
@@ -53,6 +57,7 @@
 - 前端
   - JavaScript
     - [Promise](./docs/web/js/promise)
+    - [Vue.nextTick](./docs/web/vue/vue-nextTick)
 - Linux
   - [Linux命令大全](./docs/linux/commands)
 - 工具
